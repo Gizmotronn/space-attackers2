@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     //Cooldown effect
     public float cooldownDuration = 1f; // only 1 missile per second
     private float cooldownTimer;
+    public float firingCooldownDuration = 1f;
 
     // Make it so that you have to release the key (left ctrl --> Fire1) to be able to shoot another missile
     private bool fired = false; // See fire missiles in void update
