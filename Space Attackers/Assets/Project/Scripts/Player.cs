@@ -10,6 +10,10 @@ public class Player : MonoBehaviour
     public float firingSpeed = 3f;
     public GameObject missilePrefab; // Game object (prefab) inserted into inspector tab for player
 
+    //Cooldown effect
+    public float cooldownDuration = 1f; // only 1 missile per second
+    private float cooldownTimer;
+
     // Make it so that you have to release the key (left ctrl --> Fire1) to be able to shoot another missile
     private bool fired = false; // See fire missiles in void update
 
@@ -37,18 +41,22 @@ public class Player : MonoBehaviour
             GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
         }
 
-        // Fire missiles
-        if (Input.GetAxis ("Fire1") == 1f) { // Unity editor --> Edit --> Project Settings --> Input // ^^
-            if (fired == false) {
-                GameObject missileInstance  = Instantiate (missilePrefab);
-                missileInstance.transform.SetParent(transform.parent);
-                missileInstance.transform.position = transform.position; // Set missile position (initial) --> same position as player
-                missileInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -firingSpeed); // 0 = x, firingSpeed = y pos
-                Destroy (missileInstance, 5f); // 5f = how long we want the missile to stay around for before being destroyed
-            }
-        } 
-        else {
-            fired == false;
-        } 
-    }
+		// Fire missiles.
+		cooldownTimer -= Time.deltaTime; // Time.deltaTime = how many seconds since last frame /#/ countdown clock
+		if (Input.GetAxis ("Fire1") == 1f) {
+			if (cooldownTimer <= 0 && fired == false) {
+				fired = true;
+
+				cooldownTimer = firingCooldownDuration;
+
+				GameObject missileInstance = Instantiate (missilePrefab);
+				missileInstance.transform.SetParent (transform.parent);
+				missileInstance.transform.position = transform.position;
+				missileInstance.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, firingSpeed);
+				Destroy (missileInstance, 2f);
+			}
+		} else {
+			fired = false;
+		}
+	}
 }
