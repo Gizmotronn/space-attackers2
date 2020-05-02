@@ -587,6 +587,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   horizontalLimit: 2.5
+  missilePrefab: {fileID: 3879569946606926569, guid: ae3dcebbb65af214d878399b9be5bd02,
+    type: 3}
 --- !u!1 &1583790858
 GameObject:
   m_ObjectHideFlags: 0
