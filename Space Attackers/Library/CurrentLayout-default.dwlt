@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 494}
   m_MaxSize: {x: 14002, y: 14044}
   vertical: 0
-  controlID: 105
+  controlID: 36
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
     y: 0
     width: 3440
     height: 1357
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -263,8 +263,8 @@ MonoBehaviour:
     y: 0
     width: 2260
     height: 790
-  m_MinSize: {x: 204, y: 222}
-  m_MaxSize: {x: 4004, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -405,20 +405,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Project/Prefabs
+    - Assets/Project/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Project/Prefabs
+  - Assets/Project/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Git\space-attackers\Space Attackers
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e340000
-    m_LastClickedID: 13454
-    m_ExpandedIDs: 000000003c2d00006a30000000ca9a3b
+    m_SelectedIDs: a2310000
+    m_LastClickedID: 12706
+    m_ExpandedIDs: 000000003e2d00006c30000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -446,7 +446,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003c2d0000
+    m_ExpandedIDs: 000000003e2d00006c300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -569,9 +569,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 52360000
-      m_LastClickedID: 13906
-      m_ExpandedIDs: 52fbffff5c360000
+      m_SelectedIDs: 2a380000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 4afaffff72fbffff3236000060360000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -631,9 +631,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.1617512, y: -1.108812, z: -0.37741503}
+    m_Target: {x: 0.532203, y: 0.17428064, z: -0.70214844}
     speed: 2
-    m_Value: {x: 1.1617512, y: -1.108812, z: -0.37741503}
+    m_Value: {x: 0.532203, y: 0.17428064, z: -0.70214844}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -666,9 +666,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.2992096
+    m_Target: 5.549886
     speed: 2
-    m_Value: 3.2992096
+    m_Value: 5.549886
   m_Ortho:
     m_Target: 1
     speed: 2
