@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
 
             GameObject missileInstance = Instantiate (enemyMissilePrefab); //Pass false to set the Object's position relative to its new parent.
             missileInstance.transform.SetParent (transform);
-            missileInstance.transform.position = random.Enemy.transform.position;
+            missileInstance.transform.position = randomEnemy.transform.position;
             missileInstance.GetComponent<Rigidbody2D>().velocity = new Vector2 (0, -shootingSpeed); // -shootingSpeed because it is going to move down / 0 is how much it moves on the x plane
 
             // Destroy missile (prefab) after it fires
