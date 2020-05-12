@@ -28,9 +28,9 @@ public class GameController : MonoBehaviour
             Enemy randomEnemy = enemies[Random.Range(0, enemies.Length)]; // Fetch a new enemy, this enemy will fire a missile at the player / Index values # ensures that if we have 10 enemies, it will only give 0-9, this one is the one that fires an enemy missile
 
             GameObject missileInstance = Instantiate (enemyMissilePrefab); //Pass false to set the Object's position relative to its new parent.
-            missleInstance.transform.SetParent (transform);
+            missileInstance.transform.SetParent (transform);
             missileInstance.transform.position = random.Enemy.transform.position;
-            missleInstance.GetComponent<Rigidbody2D>().velocity = new Vector2 (0, -shootingSpeed); // -shootingSpeed because it is going to move down / 0 is how much it moves on the x plane
+            missileInstance.GetComponent<Rigidbody2D>().velocity = new Vector2 (0, -shootingSpeed); // -shootingSpeed because it is going to move down / 0 is how much it moves on the x plane
 
             // Destroy missile (prefab) after it fires
             Destroy (missileInstance, 3f); // Destroys the missile after 3 seconds            
