@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float horizontalLimit = 2.5f; // See update
     public float firingSpeed = 3f;
     public GameObject missilePrefab; // Game object (prefab) inserted into inspector tab for player
+    public GameObject explosionPrefab; // https://github.com/Gizmotronn/space-attackers/issues/4
 
     //Cooldown effect
     public float cooldownDuration = 1f; // only 1 missile per second
@@ -59,5 +60,17 @@ public class Player : MonoBehaviour
 		} else {
 			fired = false;
 		}
+
+        void OnTriggerEnter2D (Collider2D otherCollider) {
+            if (otherCollider.tag == "EnemyMissile") {
+                GameObject explosionInstance = Instantiate (explosionPrefab);
+                explosionInstance.transform.SetParent(transform.parent); // same as this.transfer.parent --> parent of the enemy
+                explosionInstance.transform.position = transform.position;
+
+                Destroy (explosionInstance, 1.5f); //1.5f = 1.5 seconds
+                Destroy (gameObject);
+                Destroy (otherCollider.gameObject);
+        }
+    }
 	}
 }

@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
             missileInstance.GetComponent<Rigidbody2D>().velocity = new Vector2 (0, -shootingSpeed); // -shootingSpeed because it is going to move down / 0 is how much it moves on the x plane
 
             // Destroy missile (prefab) after it fires
-            Destroy (missileInstance, 3f); // Destroys the missile after 3 seconds            
+            Destroy (missileInstance, 5f); // Destroys the missile after 3 seconds            
 
         }
     }
