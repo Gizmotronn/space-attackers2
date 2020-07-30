@@ -418,6 +418,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   horizontalLimit: 2.5
+  firingSpeed: 3
+  missilePrefab: {fileID: 7207253475294230598, guid: 30f73942f06ba1e489e76e60b994ea69,
+    type: 3}
 --- !u!212 &831080939
 SpriteRenderer:
   m_ObjectHideFlags: 0
